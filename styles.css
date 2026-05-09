@@ -272,10 +272,32 @@ a {
   border: 1px solid #cfdedb;
   border-radius: 999px;
   padding: 4px 10px;
-  background: var(--accent-soft);
-  color: var(--accent);
   font-size: 0.86rem;
   white-space: nowrap;
+}
+
+.severity-critical {
+  border-color: #8f1515;
+  background: #b91c1c;
+  color: #fff;
+}
+
+.severity-high {
+  border-color: #c2410c;
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+.severity-medium {
+  border-color: #ca8a04;
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.severity-low {
+  border-color: #65a30d;
+  background: #ecfccb;
+  color: #3f6212;
 }
 
 .records-actions {
