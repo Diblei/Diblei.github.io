@@ -156,11 +156,31 @@ a {
 }
 
 .record-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
   min-height: 52px;
   border-bottom: 1px solid #ebe7e1;
   padding: 15px 20px;
   font-size: 1rem;
   font-weight: 650;
+}
+
+.record-list span {
+  min-width: 0;
+}
+
+.record-list strong {
+  flex: 0 0 auto;
+  border: 1px solid #cfdedb;
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.86rem;
+  font-weight: 800;
+  white-space: nowrap;
 }
 
 .record-list li:last-child {
@@ -172,6 +192,7 @@ a {
 }
 
 .cve-list li {
+  display: block;
   border-right: 1px solid #ebe7e1;
   text-align: center;
 }
@@ -235,5 +256,11 @@ a {
   .cve-list li {
     border-right: 0;
     text-align: left;
+  }
+
+  .record-list li {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
   }
 }
