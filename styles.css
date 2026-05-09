@@ -184,35 +184,33 @@ a {
 
 .cve-list {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
   margin: 0;
-  padding: 0;
+  padding: 16px;
   list-style: none;
 }
 
 .cve-list li {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 16px;
-  align-items: center;
-  min-height: 64px;
-  border-bottom: 1px solid #ebe7e1;
-  padding: 15px 20px;
+  align-content: start;
+  gap: 6px;
+  min-height: 148px;
+  border: 1px solid #ebe7e1;
+  border-radius: 12px;
+  padding: 17px;
+  background: #fbfaf8;
 }
 
 .cve-list li:last-child {
-  border-bottom: 0;
+  border-bottom: 1px solid #ebe7e1;
 }
 
-.cve-list div {
-  display: grid;
-  gap: 4px;
-  min-width: 0;
-}
-
-.cve-list a,
-.cve-list div > span:first-child {
+.cve-list a {
   width: fit-content;
-  font-weight: 750;
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 800;
 }
 
 .cve-list a:hover,
@@ -222,12 +220,14 @@ a {
   text-underline-offset: 3px;
 }
 
-.cve-list div > span:last-child {
+.cve-list span {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 .cve-list strong {
+  width: fit-content;
+  margin-top: 8px;
   border: 1px solid #cfdedb;
   border-radius: 999px;
   padding: 4px 10px;
@@ -310,8 +310,12 @@ a {
   }
 
   .cve-list li {
+    min-height: 0;
+  }
+
+  .cve-list {
     grid-template-columns: 1fr;
-    gap: 10px;
+    padding: 14px;
   }
 
   .record-list li {
