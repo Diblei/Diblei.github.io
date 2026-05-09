@@ -3,24 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Diblei Portfolio"
-    />
-    <meta property="og:title" content="Diblei | Portfolio" />
-    <meta
-      property="og:description"
-      content="Diblei Portfolio"
-    />
+    <meta name="description" content="Diblei repositories" />
+    <meta property="og:title" content="Diblei repositories" />
+    <meta property="og:description" content="Diblei repositories" />
     <meta property="og:type" content="website" />
-    <title>Diblei | Portfolio</title>
+    <title>Diblei repositories</title>
     <link rel="preconnect" href="https://github.com" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header" data-header>
-      <a class="brand" href="#home" aria-label="Diblei 포트폴리오 홈">
-        <span class="brand-mark">D</span>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Diblei home">
+        <img src="https://github.com/Diblei.png?size=96" alt="" />
         <span>Diblei</span>
       </a>
 
@@ -32,125 +26,49 @@
       </button>
 
       <nav class="site-nav" id="site-nav" aria-label="주요 섹션">
-        <a href="#home">Home</a>
         <a href="#ctf">CTF</a>
         <a href="#contest">경진대회</a>
         <a href="#cve">CVE</a>
-        <a href="#contact">Contact</a>
+        <a href="https://github.com/Diblei">GitHub</a>
       </nav>
     </header>
 
-    <main class="page-shell">
-      <section class="hero" id="home">
-        <img class="avatar" src="https://github.com/Diblei.png?size=240" alt="" />
-
-        <div class="hero-copy">
-          <h1>Diblei Portfolio</h1>
-        </div>
-
-        <div class="hero-actions" aria-label="바로가기">
-          <a class="button button-primary" href="#ctf">연혁 보기</a>
-          <a class="button button-secondary" href="https://github.com/Diblei">GitHub</a>
-        </div>
+    <main class="page-shell" id="top">
+      <section class="intro">
+        <p>Diblei repositories</p>
       </section>
 
-      <section class="summary" aria-label="포트폴리오 요약">
-        <a href="#ctf">
-          <strong>CTF</strong>
-        </a>
-        <a href="#contest">
-          <strong>경진대회</strong>
-        </a>
-        <a href="#cve">
-          <strong>CVE</strong>
-        </a>
+      <section class="record-section" id="ctf">
+        <h2>CTF</h2>
+        <ul class="record-list">
+          <li>2025 Hacksium Final</li>
+          <li>2026 BITSCTF</li>
+          <li>2026 DICECTF Quals</li>
+          <li>2026 ENKI RedTeam CTF</li>
+          <li>2026 SUCTF</li>
+          <li>2026 CODEGATE Quals</li>
+        </ul>
       </section>
 
-      <section class="timeline" aria-label="보안 포트폴리오 연혁">
-        <article class="timeline-block" id="ctf">
-          <div class="timeline-label">
-            <span>01</span>
-            <strong>CTF</strong>
-          </div>
-
-          <div class="timeline-content">
-            <div class="section-heading">
-              <h2>CTF</h2>
-            </div>
-
-            <ul class="entry-list">
-              <li>
-                <h3>2025 Hacksium Final</h3>
-              </li>
-              <li>
-                <h3>2026 BITSCTF</h3>
-              </li>
-              <li>
-                <h3>2026 DICECTF Quals</h3>
-              </li>
-              <li>
-                <h3>2026 ENKI RedTeam CTF</h3>
-              </li>
-              <li>
-                <h3>2026 SUCTF</h3>
-              </li>
-              <li>
-                <h3>2026 CODEGATE Quals</h3>
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-block" id="contest">
-          <div class="timeline-label">
-            <span>02</span>
-            <strong>경진대회</strong>
-          </div>
-
-          <div class="timeline-content">
-            <div class="section-heading">
-              <h2>경진대회</h2>
-            </div>
-
-            <ul class="entry-list">
-              <li>
-                <h3>AITOP100 2026 Final</h3>
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-block" id="cve">
-          <div class="timeline-label">
-            <span>03</span>
-            <strong>CVE</strong>
-          </div>
-
-          <div class="timeline-content">
-            <div class="section-heading">
-              <h2>CVE</h2>
-            </div>
-
-            <ul class="cve-list">
-              <li>CVE-2026-33755</li>
-              <li>CVE-2026-6817</li>
-              <li>CVE-2026-8206</li>
-            </ul>
-          </div>
-        </article>
+      <section class="record-section" id="contest">
+        <h2>경진대회</h2>
+        <ul class="record-list">
+          <li>AITOP100 2026 Final</li>
+        </ul>
       </section>
 
-      <section class="contact" id="contact">
-        <div>
-          <h2>Contact</h2>
-        </div>
-        <a class="button button-primary" href="https://github.com/Diblei">github.com/Diblei</a>
+      <section class="record-section" id="cve">
+        <h2>CVE</h2>
+        <ul class="record-list cve-list">
+          <li>CVE-2026-33755</li>
+          <li>CVE-2026-6817</li>
+          <li>CVE-2026-8206</li>
+        </ul>
       </section>
     </main>
 
     <footer class="site-footer">
       <span>© <span data-year></span> Diblei</span>
-      <a href="#home">Back to top</a>
     </footer>
 
     <script src="script.js"></script>
