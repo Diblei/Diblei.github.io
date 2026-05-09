@@ -185,49 +185,54 @@ a {
 .cve-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  gap: 16px;
   margin: 0;
-  padding: 16px;
+  padding: 18px;
   list-style: none;
 }
 
 .cve-list li {
-  display: grid;
-  align-content: start;
-  gap: 6px;
-  min-height: 148px;
-  border: 1px solid #ebe7e1;
-  border-radius: 12px;
-  padding: 17px;
-  background: #fbfaf8;
+  display: flex;
+  min-height: 154px;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #d9d4cd;
+  border-radius: 14px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 12px 26px rgba(30, 34, 38, 0.06);
 }
 
 .cve-list li:last-child {
-  border-bottom: 1px solid #ebe7e1;
+  border-bottom: 1px solid #d9d4cd;
 }
 
-.cve-list a {
+.cve-id {
   width: fit-content;
+  margin-bottom: 10px;
   color: var(--ink);
-  font-size: 1.05rem;
-  font-weight: 800;
+  font-size: 1.2rem;
+  font-weight: 850;
+  line-height: 1.15;
 }
 
-.cve-list a:hover,
-.cve-list a:focus-visible {
+.cve-id:hover,
+.cve-id:focus-visible {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.cve-list span {
+.cve-meta {
+  max-width: 100%;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
 
-.cve-list strong {
+.cve-severity {
   width: fit-content;
-  margin-top: 8px;
+  margin-top: auto;
   border: 1px solid #cfdedb;
   border-radius: 999px;
   padding: 4px 10px;
