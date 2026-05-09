@@ -169,11 +169,11 @@ a {
 .record-name em {
   display: inline-flex;
   margin-left: 8px;
-  border: 1px solid #d6cda8;
+  border: 1px solid #b85b00;
   border-radius: 999px;
   padding: 2px 7px;
-  background: #fff8d9;
-  color: #7a6726;
+  background: #ff8a00;
+  color: #fff;
   font-size: 0.78rem;
   font-style: normal;
   font-weight: 800;
@@ -181,7 +181,18 @@ a {
 }
 
 .record-quals {
-  background: #fffdf2;
+  border-left: 5px solid #ff8a00;
+  background: #fff3e4;
+}
+
+.record-quals .record-year {
+  color: #9a4a00;
+}
+
+.record-quals .record-result {
+  border-color: #efb36c;
+  background: #fff8ed;
+  color: #9a4a00;
 }
 
 .record-result {
