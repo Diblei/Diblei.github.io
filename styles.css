@@ -166,19 +166,19 @@ a {
   min-width: 0;
 }
 
-.record-quals {
-  border-left: 5px solid #65a30d;
-  background: #f0fbe4;
+.record-final {
+  border-left: 5px solid #2f6f68;
+  background: #edf7f5;
 }
 
-.record-quals .record-year {
-  color: #3f6212;
+.record-final .record-year {
+  color: #255c56;
 }
 
-.record-quals .record-result {
-  border-color: #a3d475;
-  background: #f7fee7;
-  color: #3f6212;
+.record-final .record-result {
+  border-color: #a8cfca;
+  background: #f5fbfa;
+  color: #255c56;
 }
 
 .record-result {
