@@ -201,6 +201,30 @@ a {
   border-right: 0;
 }
 
+.records-actions {
+  display: flex;
+  justify-content: center;
+  margin: 22px 0 0;
+}
+
+.more-button {
+  min-height: 40px;
+  border: 1px solid #cfdedb;
+  border-radius: 999px;
+  padding: 8px 16px;
+  background: var(--surface);
+  color: var(--accent);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.more-button:hover,
+.more-button:focus-visible {
+  background: var(--accent-soft);
+}
+
 .site-footer {
   display: flex;
   align-items: center;
