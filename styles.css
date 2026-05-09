@@ -183,17 +183,58 @@ a {
 }
 
 .cve-list {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .cve-list li {
-  display: block;
-  border-right: 1px solid #ebe7e1;
-  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  min-height: 64px;
+  border-bottom: 1px solid #ebe7e1;
+  padding: 15px 20px;
 }
 
 .cve-list li:last-child {
-  border-right: 0;
+  border-bottom: 0;
+}
+
+.cve-list div {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.cve-list a,
+.cve-list div > span:first-child {
+  width: fit-content;
+  font-weight: 750;
+}
+
+.cve-list a:hover,
+.cve-list a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cve-list div > span:last-child {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.cve-list strong {
+  border: 1px solid #cfdedb;
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.86rem;
+  white-space: nowrap;
 }
 
 .records-actions {
@@ -268,13 +309,9 @@ a {
     width: min(100% - 28px, 980px);
   }
 
-  .cve-list {
-    grid-template-columns: 1fr;
-  }
-
   .cve-list li {
-    border-right: 0;
-    text-align: left;
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .record-list li {
