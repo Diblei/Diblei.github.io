@@ -166,6 +166,24 @@ a {
   min-width: 0;
 }
 
+.record-name em {
+  display: inline-flex;
+  margin-left: 8px;
+  border: 1px solid #d6cda8;
+  border-radius: 999px;
+  padding: 2px 7px;
+  background: #fff8d9;
+  color: #7a6726;
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 800;
+  vertical-align: 1px;
+}
+
+.record-quals {
+  background: #fffdf2;
+}
+
 .record-result {
   flex: 0 0 auto;
   border: 1px solid #cfdedb;
@@ -223,11 +241,18 @@ a {
   text-underline-offset: 3px;
 }
 
-.cve-meta {
+.cve-source,
+.cve-type {
   max-width: 100%;
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.45;
+}
+
+.cve-type {
+  margin-top: 8px;
+  color: var(--ink);
+  font-weight: 700;
 }
 
 .cve-severity {
