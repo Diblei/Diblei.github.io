@@ -51,7 +51,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 64px;
+  min-height: 56px;
   padding: 0 max(22px, calc((100vw - 980px) / 2));
   border-bottom: 1px solid var(--line);
   background: rgba(246, 244, 241, 0.92);
@@ -65,14 +65,14 @@ a {
 }
 
 .brand {
-  gap: 10px;
+  gap: 8px;
   font-weight: 800;
 }
 
 .brand img {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
   object-fit: cover;
 }
 
@@ -96,8 +96,8 @@ a {
 
 .nav-toggle {
   display: none;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border: 1px solid var(--line);
   border-radius: 10px;
   background: var(--surface);
@@ -115,18 +115,7 @@ a {
 .page-shell {
   width: min(980px, calc(100% - 44px));
   margin: 0 auto;
-  padding: 34px 0 42px;
-}
-
-.intro {
-  margin-bottom: 20px;
-}
-
-.intro p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.98rem;
-  font-weight: 700;
+  padding: 24px 0 42px;
 }
 
 .record-section {
@@ -253,7 +242,7 @@ a {
 
   .site-nav {
     position: absolute;
-    top: 64px;
+    top: 56px;
     right: 18px;
     left: 18px;
     display: none;
