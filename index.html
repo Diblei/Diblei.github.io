@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Diblei의 보안 포트폴리오. CTF, 경진대회, CVE 기록을 정리합니다."
+    />
+    <meta property="og:title" content="Diblei | Portfolio" />
+    <meta
+      property="og:description"
+      content="CTF, 경진대회, CVE 기록을 정리하는 Diblei의 포트폴리오입니다."
+    />
+    <meta property="og:type" content="website" />
+    <title>Diblei | Portfolio</title>
+    <link rel="preconnect" href="https://github.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="Diblei 포트폴리오 홈">
+        <span class="brand-mark">D</span>
+        <span>Diblei</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">메뉴 열기</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="주요 섹션">
+        <a href="#about">About</a>
+        <a href="#ctf">CTF</a>
+        <a href="#contest">경진대회</a>
+        <a href="#cve">CVE</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-media" aria-hidden="true">
+          <img src="https://github.com/Diblei.png?size=420" alt="" />
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">CTF · Contest · CVE</p>
+          <h1>Diblei</h1>
+          <p class="hero-lead">
+            CTF 풀이, 보안 경진대회, 취약점 제보 기록을 차곡차곡 모아두는
+            보안 포트폴리오입니다.
+          </p>
+
+          <div class="hero-actions" aria-label="바로가기">
+            <a class="button button-primary" href="#ctf">기록 보기</a>
+            <a class="button button-secondary" href="https://github.com/Diblei">GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>보안 문제를 풀고, 재현하고, 기록합니다.</h2>
+        </div>
+
+        <div class="about-grid">
+          <p>
+            웹 보안과 CTF를 중심으로 문제 해결 경험을 쌓고 있습니다. 풀이 과정,
+            취약점 원인, 검증 방법을 남겨 다음 작업에 다시 활용하는 방식을 좋아합니다.
+          </p>
+          <p>
+            이 페이지는 CTF, 경진대회, CVE 기록을 빠르게 업데이트할 수 있도록
+            GitHub Pages 기반의 한 페이지 포트폴리오로 구성했습니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="section stats-section" aria-label="포트폴리오 요약">
+        <div class="stat">
+          <strong>01</strong>
+          <span>CTF</span>
+        </div>
+        <div class="stat">
+          <strong>02</strong>
+          <span>경진대회</span>
+        </div>
+        <div class="stat">
+          <strong>03</strong>
+          <span>CVE</span>
+        </div>
+      </section>
+
+      <section class="section records-section" id="ctf">
+        <div class="section-heading">
+          <p class="eyebrow">CTF</p>
+          <h2>CTF 기록</h2>
+        </div>
+
+        <div class="record-list">
+          <article class="record-card">
+            <span class="record-year">2025</span>
+            <h3>Hacksium Final</h3>
+            <p>7위</p>
+          </article>
+          <article class="record-card">
+            <span class="record-year">2026</span>
+            <h3>BITSCTF</h3>
+            <p>1위</p>
+          </article>
+          <article class="record-card">
+            <span class="record-year">2026</span>
+            <h3>DICECTF Quals</h3>
+            <p>open division 4위 / global 5위, 본선 8월 말 LA</p>
+          </article>
+          <article class="record-card">
+            <span class="record-year">2026</span>
+            <h3>ENKI RedTeam CTF</h3>
+            <p>7위</p>
+          </article>
+          <article class="record-card">
+            <span class="record-year">2026</span>
+            <h3>SUCTF</h3>
+            <p>2위</p>
+          </article>
+          <article class="record-card">
+            <span class="record-year">2026</span>
+            <h3>CODEGATE Quals</h3>
+            <p>12위, 본선 2026.07.23 ~ 2026.07.24 서울 코엑스</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contest-section" id="contest">
+        <div class="section-heading">
+          <p class="eyebrow">Contest</p>
+          <h2>경진대회</h2>
+        </div>
+
+        <div class="contest-card">
+          <span class="record-year">2026</span>
+          <h3>AITOP100 2026 Final</h3>
+          <p>본선 2026.04.04, 경기도 카카오 AI캠퍼스</p>
+        </div>
+      </section>
+
+      <section class="section cve-section" id="cve">
+        <div class="section-heading">
+          <p class="eyebrow">CVE</p>
+          <h2>취약점 제보 기록</h2>
+        </div>
+
+        <div class="cve-grid">
+          <article class="cve-card">
+            <span>Registered</span>
+            <strong>CVE-2026-33755</strong>
+          </article>
+
+          <article class="cve-card">
+            <span>Registered</span>
+            <strong>CVE-2026-6817</strong>
+          </article>
+
+          <article class="cve-card">
+            <span>Registered</span>
+            <strong>CVE-2026-8206</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>기록과 작업물은 GitHub에서 이어집니다.</h2>
+        </div>
+        <a class="button button-primary" href="https://github.com/Diblei">github.com/Diblei</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span data-year></span> Diblei</span>
+      <a href="#home">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
