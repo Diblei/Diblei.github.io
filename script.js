@@ -24,12 +24,25 @@ if (navToggle && siteNav) {
 
 recordSections.forEach((section) => {
   const items = Array.from(section.querySelectorAll(".record-list li"));
+  const finalEvents = new Set(
+    items
+      .filter((item) => item.classList.contains("record-final") && item.dataset.event)
+      .map((item) => item.dataset.event),
+  );
+  const duplicateQualifiers = items.filter(
+    (item) =>
+      item.classList.contains("record-qualifier") &&
+      item.dataset.event &&
+      finalEvents.has(item.dataset.event),
+  );
+  const visibleItems = items.filter((item) => !duplicateQualifiers.includes(item));
+  const overflowItems = visibleItems.slice(recordLimit);
+  const hiddenItems = Array.from(new Set([...duplicateQualifiers, ...overflowItems]));
 
-  if (items.length <= recordLimit) {
+  if (hiddenItems.length === 0) {
     return;
   }
 
-  const hiddenItems = items.slice(recordLimit);
   const actions = document.createElement("div");
   const button = document.createElement("button");
 
