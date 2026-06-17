@@ -250,6 +250,22 @@ a {
   line-height: 1.45;
 }
 
+.cve-source[href] {
+  width: fit-content;
+  font-weight: 750;
+}
+
+.cve-source[href]:hover,
+.cve-source[href]:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cve-article {
+  margin-top: 6px;
+}
+
 .cve-type {
   margin-top: 8px;
   color: var(--ink);
