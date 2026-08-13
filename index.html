@@ -9,7 +9,7 @@
     <meta property="og:type" content="website" />
     <title>Diblei</title>
     <link rel="preconnect" href="https://github.com" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260813-1" />
   </head>
   <body>
     <header class="site-header">
@@ -72,7 +72,7 @@
               <span class="record-team">Team dda_com</span>
             </strong>
           </li>
-          <li class="record-qualifier" data-event="sas-ctf-2026">
+          <li class="record-qualifier" data-event="sas-ctf-2026" hidden>
             <span class="record-year">2026</span>
             <span class="record-name">SAS CTF Quals</span>
             <strong class="record-result record-result-with-team">
@@ -81,7 +81,7 @@
               <span class="record-team">Team dda_com</span>
             </strong>
           </li>
-          <li class="record-qualifier" data-event="defcon-ctf-2026">
+          <li class="record-qualifier" data-event="defcon-ctf-2026" hidden>
             <span class="record-year">2026</span>
             <span class="record-name">DEF CON CTF Qualifiers 2026</span>
             <strong class="record-result record-result-with-team">
@@ -108,12 +108,12 @@
               <span class="record-team">Team dda_com</span>
             </strong>
           </li>
-          <li class="record-qualifier" data-event="hacktheon-2026">
+          <li class="record-qualifier" data-event="hacktheon-2026" hidden>
             <span class="record-year">2026</span>
             <span class="record-name">HACKTHEON Quals</span>
             <strong class="record-result">5위</strong>
           </li>
-          <li class="record-qualifier" data-event="codegate-2026">
+          <li class="record-qualifier" data-event="codegate-2026" hidden>
             <span class="record-year">2026</span>
             <span class="record-name">CODEGATE Quals</span>
             <strong class="record-result record-result-with-team">
@@ -131,7 +131,7 @@
               <span class="record-team">Team dda_com</span>
             </strong>
           </li>
-          <li class="record-qualifier" data-event="dicectf-2026">
+          <li class="record-qualifier" data-event="dicectf-2026" hidden>
             <span class="record-year">2026</span>
             <span class="record-name">DICECTF Quals</span>
             <strong class="record-result record-result-with-team">
@@ -175,7 +175,7 @@
       <section class="record-section" id="cve">
         <h2>CVE</h2>
         <ul class="cve-list">
-          <li>
+          <li class="cve-featured">
             <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-8206">
               CVE-2026-8206
             </a>
@@ -189,15 +189,66 @@
             <span class="cve-type">Unauthenticated Privilege Escalation</span>
             <strong class="cve-severity severity-critical">Critical 9.8</strong>
           </li>
-          <li>
-            <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-45551">
-              CVE-2026-45551
+          <li class="cve-featured">
+            <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-14282">
+              CVE-2026-14282
+            </a>
+            <span class="cve-source">WordPress Plugin · GoDAM</span>
+            <span class="cve-type">Unauthenticated Arbitrary File Upload · RCE</span>
+            <strong class="cve-severity severity-critical">Critical 9.8</strong>
+          </li>
+          <li class="cve-featured">
+            <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-13439">
+              CVE-2026-13439
+            </a>
+            <span class="cve-source">WordPress Plugin · Easy Form Builder</span>
+            <span class="cve-type">Unauthenticated Privilege Escalation</span>
+            <strong class="cve-severity severity-critical">Critical 9.8</strong>
+          </li>
+          <li class="cve-featured">
+            <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-14487">
+              CVE-2026-14487
+            </a>
+            <span class="cve-source">WordPress Plugin · Simple Coherent Form</span>
+            <a class="cve-source cve-article" href="https://cvebrief.com/archive/2026/07/08/">
+              Featured in Security Brief
+            </a>
+            <span class="cve-type">Unauthenticated Arbitrary File Deletion · RCE</span>
+            <strong class="cve-severity severity-critical">Critical 9.1</strong>
+          </li>
+          <li class="cve-featured">
+            <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33755">
+              CVE-2026-33755
             </a>
             <span class="cve-source">Group-Office</span>
-            <span class="cve-type">Authenticated Stored XSS</span>
-            <strong class="cve-severity severity-medium">Medium 5.1</strong>
+            <span class="cve-type">Authenticated SQL Injection</span>
+            <strong class="cve-severity severity-high">High 8.8</strong>
           </li>
-          <li>
+          <li class="cve-featured">
+            <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-14327">
+              CVE-2026-14327
+            </a>
+            <span class="cve-source">WordPress Plugin · AR for WordPress</span>
+            <span class="cve-type">Unauthenticated Arbitrary File Read</span>
+            <strong class="cve-severity severity-high">High 7.5</strong>
+          </li>
+          <li class="cve-featured">
+            <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-14352">
+              CVE-2026-14352
+            </a>
+            <span class="cve-source">WordPress Plugin · AR for WooCommerce</span>
+            <span class="cve-type">Unauthenticated Arbitrary File Read</span>
+            <strong class="cve-severity severity-high">High 7.5</strong>
+          </li>
+          <li class="cve-featured">
+            <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-13262">
+              CVE-2026-13262
+            </a>
+            <span class="cve-source">WordPress Plugin · Majestic Support</span>
+            <span class="cve-type">Authenticated SQL Injection</span>
+            <strong class="cve-severity severity-medium">Medium 6.5</strong>
+          </li>
+          <li class="cve-featured">
             <a
               class="cve-id"
               href="https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/quiz-maker/quiz-maker-by-ays-67129-unauthenticated-stored-cross-site-scripting-via-rate-reason"
@@ -208,13 +259,29 @@
             <span class="cve-type">Unauthenticated Stored XSS</span>
             <strong class="cve-severity severity-medium">Medium 5.8</strong>
           </li>
-          <li>
-            <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33755">
-              CVE-2026-33755
+          <li class="cve-featured">
+            <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-45551">
+              CVE-2026-45551
             </a>
             <span class="cve-source">Group-Office</span>
-            <span class="cve-type">Authenticated SQL Injection</span>
-            <strong class="cve-severity severity-high">High 8.8</strong>
+            <span class="cve-type">Authenticated Stored XSS</span>
+            <strong class="cve-severity severity-medium">Medium 5.1</strong>
+          </li>
+          <li hidden>
+            <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-14524">
+              CVE-2026-14524
+            </a>
+            <span class="cve-source">WordPress Plugin · ProSolution WP Client</span>
+            <span class="cve-type">Disclosure Pending</span>
+            <strong class="cve-severity severity-pending">Reserved</strong>
+          </li>
+          <li hidden>
+            <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-15001">
+              CVE-2026-15001
+            </a>
+            <span class="cve-source">WordPress Plugin · bLoyal</span>
+            <span class="cve-type">Disclosure Pending</span>
+            <strong class="cve-severity severity-pending">Reserved</strong>
           </li>
         </ul>
       </section>
@@ -242,6 +309,6 @@
       <span>© <span data-year></span> Diblei</span>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260813-1"></script>
   </body>
 </html>
