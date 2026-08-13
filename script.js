@@ -24,33 +24,26 @@ if (navToggle && siteNav) {
 
 recordSections.forEach((section) => {
   const items = Array.from(section.querySelectorAll(".record-list li"));
-  const finalEvents = new Set(
-    items
-      .filter((item) => item.classList.contains("record-final") && item.dataset.event)
-      .map((item) => item.dataset.event),
-  );
-  const duplicateQualifiers = items.filter(
-    (item) =>
-      item.classList.contains("record-qualifier") &&
-      item.dataset.event &&
-      finalEvents.has(item.dataset.event),
-  );
-  const visibleItems = items.filter((item) => !duplicateQualifiers.includes(item));
-  const overflowItems = visibleItems.slice(recordLimit);
 
-  const updateQualifierVisibility = () => {
-    const showQualifiers = section.id === "ctf" && window.location.hash === "#ctf";
+  if (section.id === "ctf") {
+    const finalItems = items.filter((item) => item.classList.contains("record-final"));
+    const medalFinals = finalItems.filter((item) => item.querySelector(".sr-only"));
+    const otherFinals = finalItems.filter((item) => !medalFinals.includes(item));
+    const featuredFinals = new Set([...medalFinals, ...otherFinals].slice(0, recordLimit));
+    const updateCtfVisibility = () => {
+      const showAllRecords = window.location.hash === "#ctf";
 
-    duplicateQualifiers.forEach((item) => {
-      item.hidden = !showQualifiers;
-    });
-  };
+      items.forEach((item) => {
+        item.hidden = !showAllRecords && !featuredFinals.has(item);
+      });
+    };
 
-  updateQualifierVisibility();
-
-  if (duplicateQualifiers.length > 0) {
-    window.addEventListener("hashchange", updateQualifierVisibility);
+    updateCtfVisibility();
+    window.addEventListener("hashchange", updateCtfVisibility);
+    return;
   }
+
+  const overflowItems = items.slice(recordLimit);
 
   if (overflowItems.length === 0) {
     return;
