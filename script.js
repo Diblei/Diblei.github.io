@@ -23,7 +23,7 @@ if (navToggle && siteNav) {
 }
 
 recordSections.forEach((section) => {
-  const items = Array.from(section.querySelectorAll(".record-list li"));
+  const items = Array.from(section.querySelectorAll(".record-list li, .cve-list li"));
 
   if (section.id === "ctf") {
     const finalItems = items.filter((item) => item.classList.contains("record-final"));
@@ -40,6 +40,23 @@ recordSections.forEach((section) => {
 
     updateCtfVisibility();
     window.addEventListener("hashchange", updateCtfVisibility);
+    return;
+  }
+
+  if (section.id === "cve") {
+    const featuredCves = new Set(
+      items.filter((item) => item.classList.contains("cve-featured")).slice(0, recordLimit),
+    );
+    const updateCveVisibility = () => {
+      const showAllRecords = window.location.hash === "#cve";
+
+      items.forEach((item) => {
+        item.hidden = !showAllRecords && !featuredCves.has(item);
+      });
+    };
+
+    updateCveVisibility();
+    window.addEventListener("hashchange", updateCveVisibility);
     return;
   }
 
