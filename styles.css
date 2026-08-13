@@ -182,6 +182,10 @@ a {
 }
 
 .record-result {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   flex: 0 0 auto;
   border: 1px solid #cfdedb;
   border-radius: 999px;
@@ -191,6 +195,15 @@ a {
   font-size: 0.86rem;
   font-weight: 800;
   white-space: nowrap;
+}
+
+.record-result-separator {
+  color: #8b9895;
+  font-weight: 650;
+}
+
+.record-team {
+  font-weight: 750;
 }
 
 .record-list li:last-child {
@@ -397,5 +410,11 @@ a {
     max-width: 118px;
     white-space: normal;
     text-align: center;
+  }
+
+  .record-result-with-team {
+    grid-column: 2 / -1;
+    justify-self: start;
+    max-width: 100%;
   }
 }
