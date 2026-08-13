@@ -22,47 +22,8 @@ if (navToggle && siteNav) {
   });
 }
 
-recordSections.forEach((section) => {
-  const items = Array.from(section.querySelectorAll(".record-list li, .cve-list li"));
-
-  if (section.id === "ctf") {
-    const finalItems = items.filter((item) => item.classList.contains("record-final"));
-    const medalFinals = finalItems.filter((item) => item.querySelector(".sr-only"));
-    const otherFinals = finalItems.filter((item) => !medalFinals.includes(item));
-    const featuredFinals = new Set([...medalFinals, ...otherFinals].slice(0, recordLimit));
-    const updateCtfVisibility = () => {
-      const showAllRecords = window.location.hash === "#ctf";
-
-      items.forEach((item) => {
-        item.hidden = !showAllRecords && !featuredFinals.has(item);
-      });
-    };
-
-    updateCtfVisibility();
-    window.addEventListener("hashchange", updateCtfVisibility);
-    return;
-  }
-
-  if (section.id === "cve") {
-    const featuredCves = new Set(
-      items.filter((item) => item.classList.contains("cve-featured")).slice(0, recordLimit),
-    );
-    const updateCveVisibility = () => {
-      const showAllRecords = window.location.hash === "#cve";
-
-      items.forEach((item) => {
-        item.hidden = !showAllRecords && !featuredCves.has(item);
-      });
-    };
-
-    updateCveVisibility();
-    window.addEventListener("hashchange", updateCveVisibility);
-    return;
-  }
-
-  const overflowItems = items.slice(recordLimit);
-
-  if (overflowItems.length === 0) {
+const addRecordsToggle = (section, hiddenItems) => {
+  if (hiddenItems.length === 0) {
     return;
   }
 
@@ -73,20 +34,50 @@ recordSections.forEach((section) => {
   button.className = "more-button";
   button.type = "button";
   button.textContent = "더보기";
+  button.setAttribute("aria-expanded", "false");
   actions.append(button);
   section.append(actions);
 
-  overflowItems.forEach((item) => {
+  hiddenItems.forEach((item) => {
     item.hidden = true;
   });
 
   button.addEventListener("click", () => {
-    const shouldExpand = overflowItems.some((item) => item.hidden);
+    const shouldExpand = hiddenItems.some((item) => item.hidden);
 
-    overflowItems.forEach((item) => {
+    hiddenItems.forEach((item) => {
       item.hidden = !shouldExpand;
     });
 
     button.textContent = shouldExpand ? "접기" : "더보기";
+    button.setAttribute("aria-expanded", String(shouldExpand));
   });
+};
+
+recordSections.forEach((section) => {
+  const items = Array.from(section.querySelectorAll(".record-list li, .cve-list li"));
+
+  if (section.id === "ctf") {
+    const finalItems = items.filter((item) => item.classList.contains("record-final"));
+    const medalFinals = finalItems.filter((item) => item.querySelector(".sr-only"));
+    const otherFinals = finalItems.filter((item) => !medalFinals.includes(item));
+    const featuredFinals = new Set([...medalFinals, ...otherFinals].slice(0, recordLimit));
+    const hiddenItems = items.filter((item) => !featuredFinals.has(item));
+
+    addRecordsToggle(section, hiddenItems);
+    return;
+  }
+
+  if (section.id === "cve") {
+    const featuredCves = new Set(
+      items.filter((item) => item.classList.contains("cve-featured")).slice(0, recordLimit),
+    );
+    const hiddenItems = items.filter((item) => !featuredCves.has(item));
+
+    addRecordsToggle(section, hiddenItems);
+    return;
+  }
+
+  const overflowItems = items.slice(recordLimit);
+  addRecordsToggle(section, overflowItems);
 });
