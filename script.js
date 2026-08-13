@@ -37,9 +37,22 @@ recordSections.forEach((section) => {
   );
   const visibleItems = items.filter((item) => !duplicateQualifiers.includes(item));
   const overflowItems = visibleItems.slice(recordLimit);
-  const hiddenItems = Array.from(new Set([...duplicateQualifiers, ...overflowItems]));
 
-  if (hiddenItems.length === 0) {
+  const updateQualifierVisibility = () => {
+    const showQualifiers = section.id === "ctf" && window.location.hash === "#ctf";
+
+    duplicateQualifiers.forEach((item) => {
+      item.hidden = !showQualifiers;
+    });
+  };
+
+  updateQualifierVisibility();
+
+  if (duplicateQualifiers.length > 0) {
+    window.addEventListener("hashchange", updateQualifierVisibility);
+  }
+
+  if (overflowItems.length === 0) {
     return;
   }
 
@@ -53,14 +66,14 @@ recordSections.forEach((section) => {
   actions.append(button);
   section.append(actions);
 
-  hiddenItems.forEach((item) => {
+  overflowItems.forEach((item) => {
     item.hidden = true;
   });
 
   button.addEventListener("click", () => {
-    const shouldExpand = hiddenItems.some((item) => item.hidden);
+    const shouldExpand = overflowItems.some((item) => item.hidden);
 
-    hiddenItems.forEach((item) => {
+    overflowItems.forEach((item) => {
       item.hidden = !shouldExpand;
     });
 
