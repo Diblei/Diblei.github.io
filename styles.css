@@ -332,7 +332,9 @@ a {
 .records-actions {
   display: flex;
   justify-content: center;
-  margin: 22px 0 0;
+  border-top: 1px solid var(--line);
+  padding: 14px 18px;
+  background: #fbfaf8;
 }
 
 .more-button {
