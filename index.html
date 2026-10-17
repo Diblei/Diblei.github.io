@@ -9,7 +9,7 @@
     <meta property="og:type" content="website" />
     <title>Dbi · CTF &amp; CVE</title>
     <link rel="icon" href="assets/avatar.png" type="image/png" />
-    <link rel="stylesheet" href="styles.css?v=20261017-9" />
+    <link rel="stylesheet" href="styles.css?v=20261017-10" />
     <noscript>
       <style>
         .record-list > li[hidden],
@@ -78,6 +78,12 @@
             <span class="category-count" data-total="certifications"
               >3</span
             ></span
+          >
+        </a>
+        <a id="tab-skills" class="category-skills" href="#skills">
+          <span class="category-label"
+            >스킬
+            <span class="category-count" data-total="skills">5</span></span
           >
         </a>
       </nav>
@@ -678,6 +684,59 @@
               <span class="record-name">네트워크관리사 2급</span>
             </li>
           </ul>
+        </section>
+
+        <section
+          class="record-section"
+          id="skills"
+          aria-labelledby="skills-heading"
+        >
+          <div class="section-heading">
+            <div class="section-title">
+              <h2 id="skills-heading">스킬</h2>
+            </div>
+          </div>
+          <div class="skill-groups">
+            <div class="skill-group">
+              <h3 id="security-skills-heading">
+                <img
+                  src="assets/icons/shield-check.svg"
+                  width="24"
+                  height="24"
+                  alt=""
+                />
+                보안
+              </h3>
+              <ul
+                class="record-list"
+                id="security-skill-records"
+                aria-labelledby="security-skills-heading"
+              >
+                <li><span class="record-name">AI 기반 펜테스팅</span></li>
+                <li><span class="record-name">모의해킹</span></li>
+                <li><span class="record-name">취약점 점검</span></li>
+              </ul>
+            </div>
+            <div class="skill-group skill-group-development">
+              <h3 id="development-skills-heading">
+                <img
+                  src="assets/icons/code-xml.svg"
+                  width="24"
+                  height="24"
+                  alt=""
+                />
+                개발
+              </h3>
+              <ul
+                class="record-list"
+                id="development-skill-records"
+                aria-labelledby="development-skills-heading"
+              >
+                <li><span class="record-name">웹 개발</span></li>
+                <li><span class="record-name">게임 개발</span></li>
+              </ul>
+            </div>
+          </div>
         </section>
       </main>
     </div>
