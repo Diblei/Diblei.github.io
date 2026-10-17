@@ -140,7 +140,13 @@ main:focus {
   transform: rotate(-3deg);
   content: "";
 }
-.github-link {
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.github-link,
+.email-link {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -149,12 +155,18 @@ main:focus {
   font-size: 14px;
   font-weight: 550;
 }
-.github-link:hover {
+.github-link:hover,
+.email-link:hover {
   text-decoration: underline;
   text-underline-offset: 5px;
 }
-.github-link img {
+.github-link img,
+.email-link img {
+  flex-shrink: 0;
   opacity: 0.8;
+}
+.email-link span {
+  overflow-wrap: anywhere;
 }
 .page-shell {
   flex: 1;
@@ -792,8 +804,15 @@ main:focus {
     width: calc(100% - 36px);
   }
   .header-inner {
+    flex-wrap: wrap;
+    row-gap: 8px;
     min-height: 102px;
     padding: 20px 0;
+  }
+  .header-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
   }
   .brand {
     gap: 12px;
@@ -805,7 +824,8 @@ main:focus {
   .brand h1 {
     font-size: 32px;
   }
-  .github-link {
+  .github-link,
+  .email-link {
     gap: 6px;
     font-size: 13px;
   }

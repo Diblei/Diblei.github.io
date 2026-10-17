@@ -9,7 +9,7 @@
     <meta property="og:type" content="website" />
     <title>Dbi · CTF &amp; CVE</title>
     <link rel="icon" href="assets/avatar.png" type="image/png" />
-    <link rel="stylesheet" href="styles.css?v=20261017-8" />
+    <link rel="stylesheet" href="styles.css?v=20261017-9" />
     <noscript>
       <style>
         .record-list > li[hidden],
@@ -27,16 +27,26 @@
           <img src="assets/avatar.png" width="48" height="48" alt="" />
           <h1>Dbi</h1>
         </a>
-        <a class="github-link" href="https://github.com/Diblei">
-          <img src="assets/icons/github.svg" width="18" height="18" alt="" />
-          <span>GitHub</span>
-          <img
-            src="assets/icons/arrow-up-right.svg"
-            width="14"
-            height="14"
-            alt=""
-          />
-        </a>
+        <div class="header-links">
+          <a
+            class="email-link"
+            href="mailto:perkm8150@gmail.com"
+            title="이메일 보내기"
+          >
+            <img src="assets/icons/mail.svg" width="18" height="18" alt="" />
+            <span>perkm8150@gmail.com</span>
+          </a>
+          <a class="github-link" href="https://github.com/Diblei">
+            <img src="assets/icons/github.svg" width="18" height="18" alt="" />
+            <span>GitHub</span>
+            <img
+              src="assets/icons/arrow-up-right.svg"
+              width="14"
+              height="14"
+              alt=""
+            />
+          </a>
+        </div>
       </div>
     </header>
 
@@ -430,6 +440,27 @@
             <li class="cve-featured">
               <a
                 class="cve-id"
+                href="https://www.cve.org/CVERecord?id=CVE-2026-14524"
+              >
+                CVE-2026-14524
+              </a>
+              <span class="cve-source"
+                >WordPress Plugin · ProSolution WP Client</span
+              >
+              <span class="cve-type"
+                >Unauthenticated Arbitrary File Deletion · RCE</span
+              >
+              <strong
+                class="cve-severity severity-critical"
+                title="CVSS 3.1 · Wordfence"
+              >
+                <span class="severity-label">Critical</span>
+                <span class="severity-score">9.1</span>
+              </strong>
+            </li>
+            <li class="cve-featured">
+              <a
+                class="cve-id"
                 href="https://www.cve.org/CVERecord?id=CVE-2026-33755"
               >
                 CVE-2026-33755
@@ -437,6 +468,25 @@
               <span class="cve-source">Group-Office</span>
               <span class="cve-type">Authenticated SQL Injection</span>
               <strong class="cve-severity severity-high" title="CVSS">
+                <span class="severity-label">High</span>
+                <span class="severity-score">8.8</span>
+              </strong>
+            </li>
+            <li class="cve-featured">
+              <a
+                class="cve-id"
+                href="https://www.cve.org/CVERecord?id=CVE-2026-15001"
+              >
+                CVE-2026-15001
+              </a>
+              <span class="cve-source">WordPress Plugin · bLoyal</span>
+              <span class="cve-type"
+                >Authenticated (Subscriber+) Privilege Escalation</span
+              >
+              <strong
+                class="cve-severity severity-high"
+                title="CVSS 3.1 · Wordfence"
+              >
                 <span class="severity-label">High</span>
                 <span class="severity-score">8.8</span>
               </strong>
@@ -491,7 +541,7 @@
                 <span class="severity-score">7.2</span>
               </strong>
             </li>
-            <li class="cve-featured">
+            <li hidden>
               <a
                 class="cve-id"
                 href="https://www.cve.org/CVERecord?id=CVE-2026-13262"
@@ -507,7 +557,7 @@
                 <span class="severity-score">6.5</span>
               </strong>
             </li>
-            <li class="cve-featured">
+            <li hidden>
               <a
                 class="cve-id"
                 href="https://www.cve.org/CVERecord?id=CVE-2026-6817"
@@ -536,30 +586,6 @@
                 <span class="severity-label">Medium</span>
                 <span class="severity-score">5.1</span>
               </strong>
-            </li>
-            <li hidden>
-              <a
-                class="cve-id"
-                href="https://www.cve.org/CVERecord?id=CVE-2026-14524"
-              >
-                CVE-2026-14524
-              </a>
-              <span class="cve-source"
-                >WordPress Plugin · ProSolution WP Client</span
-              >
-              <span class="cve-type">Disclosure Pending</span>
-              <strong class="cve-severity severity-pending">Reserved</strong>
-            </li>
-            <li hidden>
-              <a
-                class="cve-id"
-                href="https://www.cve.org/CVERecord?id=CVE-2026-15001"
-              >
-                CVE-2026-15001
-              </a>
-              <span class="cve-source">WordPress Plugin · bLoyal</span>
-              <span class="cve-type">Disclosure Pending</span>
-              <strong class="cve-severity severity-pending">Reserved</strong>
             </li>
           </ul>
         </section>
