@@ -1,0 +1,27 @@
+Event logos are used to identify the competitions in the portfolio.
+All trademarks and artwork belong to their respective owners.
+No affiliation or endorsement is implied.
+
+DEF CON
+https://defcon.org/images/logos/DEFCON-logo.webp
+
+CODEGATE
+https://codegate.org/home/2025/codegate/ENG/icon/android-icon-192x192.png
+Current event website: https://codegate.org/
+
+HACKTHEON
+https://hacktheon.org/2025/images/main/logo_2026.png
+Current event website: https://hacktheon.org/y2026/
+
+TJCTF
+https://tjctf.org/icons/icon-192x192.png
+
+AI_TOP_100 (generic event logo, no edition-specific artwork)
+https://aitop100.org/logo_black.png
+
+Kakao (event sponsor wordmark)
+https://t1.kakaocdn.net/impact/aitop100/image/logo/logo_kakao.png
+Sponsor role: https://aitop100.org/about
+2026 CAMPUS announcement: https://www.kakaocorp.com/page/detail/11978
+
+Letter marks used for other events are visual identifiers, not official logos.
