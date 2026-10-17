@@ -719,16 +719,58 @@ main:focus {
 #skills .record-list > li {
   display: flex;
   align-items: center;
-  min-height: 68px;
-  padding: 18px 16px;
+  gap: 14px;
+  min-height: 76px;
+  padding: 14px 16px;
   border-bottom: 1px solid #d3ddda;
 }
 #skills .record-list > li:nth-child(odd) {
   background: #f4f7f6;
 }
 #skills .record-name {
+  min-width: 0;
   font-size: 18px;
   font-weight: 600;
+}
+.skill-visual {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  flex: 0 0 44px;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+}
+.skill-visual::before {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 4px;
+  width: 34px;
+  height: 18px;
+  background: var(--skill-accent);
+  transform: rotate(-7deg);
+  content: "";
+}
+.skill-visual img {
+  width: 32px;
+  height: 32px;
+  opacity: 0.8;
+}
+.skill-visual-ai {
+  --skill-accent: #c6e9df;
+}
+.skill-visual-terminal {
+  --skill-accent: #d7dff2;
+}
+.skill-visual-audit {
+  --skill-accent: #f7e7a6;
+}
+.skill-visual-web {
+  --skill-accent: #cce8f3;
+}
+.skill-visual-game {
+  --skill-accent: #edccd4;
 }
 
 .records-actions {
