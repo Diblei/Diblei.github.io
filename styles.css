@@ -719,9 +719,9 @@ main:focus {
 #skills .record-list > li {
   display: flex;
   align-items: center;
-  gap: 14px;
-  min-height: 76px;
-  padding: 14px 16px;
+  gap: 18px;
+  min-height: 120px;
+  padding: 10px 14px;
   border-bottom: 1px solid #d3ddda;
 }
 #skills .record-list > li:nth-child(odd) {
@@ -733,44 +733,15 @@ main:focus {
   font-weight: 600;
 }
 .skill-visual {
-  position: relative;
-  isolation: isolate;
-  display: grid;
-  flex: 0 0 44px;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-}
-.skill-visual::before {
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  bottom: 4px;
-  width: 34px;
-  height: 18px;
-  background: var(--skill-accent);
-  transform: rotate(-7deg);
-  content: "";
+  display: block;
+  flex: 0 0 144px;
+  width: 144px;
+  aspect-ratio: 3 / 2;
 }
 .skill-visual img {
-  width: 32px;
-  height: 32px;
-  opacity: 0.8;
-}
-.skill-visual-ai {
-  --skill-accent: #c6e9df;
-}
-.skill-visual-terminal {
-  --skill-accent: #d7dff2;
-}
-.skill-visual-audit {
-  --skill-accent: #f7e7a6;
-}
-.skill-visual-web {
-  --skill-accent: #cce8f3;
-}
-.skill-visual-game {
-  --skill-accent: #edccd4;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .records-actions {
@@ -1083,6 +1054,15 @@ main:focus {
 }
 
 @media (max-width: 480px) {
+  #skills .record-list > li {
+    gap: 14px;
+    min-height: 104px;
+    padding: 10px 12px;
+  }
+  .skill-visual {
+    flex-basis: 112px;
+    width: 112px;
+  }
   .site-nav a {
     min-height: 60px;
     padding: 8px 2px;
