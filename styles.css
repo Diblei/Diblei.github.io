@@ -410,10 +410,7 @@ main:focus {
   grid-template-columns: 72px minmax(0, 1fr) auto;
   min-height: 126px;
   margin-bottom: 8px;
-  padding: 22px 26px;
-  background: #eef6f3;
-  border: 0;
-  border-radius: 8px;
+  padding: 22px 0;
 }
 #ctf .record-list > li:first-child .record-mark {
   width: 68px;
@@ -435,34 +432,27 @@ main:focus {
 .cve-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  column-gap: 38px;
 }
 .cve-list > li {
   --risk-color: #626e74;
-  --risk-tint: #f0f3f4;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 74px;
+  grid-template-columns: minmax(0, 1fr) 64px;
   grid-template-rows: auto auto 1fr;
   align-content: start;
   gap: 8px 18px;
-  min-height: 176px;
-  padding: 20px;
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--risk-color);
-  border-radius: 6px;
-  background: white;
+  min-height: 168px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
 }
 .cve-list > li:has(.severity-critical) {
   --risk-color: #b72d48;
-  --risk-tint: #fceaf0;
 }
 .cve-list > li:has(.severity-high) {
   --risk-color: #8a5710;
-  --risk-tint: #fff0cf;
 }
 .cve-list > li:has(.severity-medium) {
   --risk-color: #286585;
-  --risk-tint: #e6f2f9;
 }
 .cve-id {
   grid-area: 1 / 1;
@@ -500,11 +490,8 @@ main:focus {
   grid-area: 1 / 2 / 3 / 3;
   align-self: start;
   justify-self: end;
-  width: 74px;
-  min-height: 76px;
-  padding: 8px 4px;
-  border-radius: 4px;
-  background: var(--risk-tint);
+  width: 64px;
+  min-height: 74px;
   color: var(--risk-color);
   font-size: 12px;
   font-weight: 600;
@@ -530,19 +517,11 @@ main:focus {
 }
 .cve-list > li:has(.cve-article) {
   --coverage-color: #276853;
-  --coverage-tint: #e6f3ec;
   grid-template-rows: auto auto auto 1fr;
-  min-height: 234px;
-  border-color: #b4cfbf;
-  border-left: 3px solid var(--coverage-color);
-  background: #f7fbf8;
+  min-height: 216px;
 }
 .cve-list > li:has(.cve-article[href*="cvebrief.com"]) {
   --coverage-color: #375f83;
-  --coverage-tint: #e7f0f8;
-  border-color: #b8ccdd;
-  border-left-color: var(--coverage-color);
-  background: #f7fafd;
 }
 .cve-list > li:has(.cve-article) .cve-id {
   grid-area: 2 / 1;
@@ -563,12 +542,8 @@ main:focus {
   gap: 6px 12px;
   grid-area: 1 / 1 / 2 / -1;
   justify-self: stretch;
-  min-height: 48px;
-  margin: -20px -20px 10px;
-  padding: 12px 20px;
-  border-bottom: 1px solid #cfdfd8;
-  border-radius: 3px 5px 0 0;
-  background: var(--coverage-tint);
+  min-height: 32px;
+  margin-bottom: 10px;
   color: var(--coverage-color);
   font-size: 14px;
   font-weight: 650;
@@ -590,7 +565,7 @@ main:focus {
   text-decoration: underline;
 }
 .cve-article:focus-visible {
-  outline-offset: -4px;
+  outline-offset: 4px;
 }
 
 #contest .record-list > li {
@@ -885,7 +860,7 @@ main:focus {
   }
   #ctf .record-list > li:first-child {
     grid-template-columns: 44px minmax(0, 1fr) auto;
-    padding: 20px 14px;
+    padding: 20px 0;
   }
   #ctf .record-list > li:first-child .record-mark,
   #ctf .record-list > li:first-child .record-mark img {
