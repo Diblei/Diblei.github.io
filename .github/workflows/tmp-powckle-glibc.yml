@@ -1,0 +1,42 @@
+name: tmp-powckle-glibc
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - tmp-powckle-glibc-20260830
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download and extract Debian sid glibc
+        shell: bash
+        run: |
+          set -euxo pipefail
+          mkdir -p artifact work/root work/dbg
+          base=https://ftp.debian.org/debian/pool/main/g/glibc
+          curl --retry 5 -fsSL "$base/libc6_2.43-4_amd64.deb" -o work/libc6.deb
+          curl --retry 5 -fsSL "$base/libc6-dbg_2.43-4_amd64.deb" -o work/libc6-dbg.deb
+          dpkg-deb -x work/libc6.deb work/root
+          dpkg-deb -x work/libc6-dbg.deb work/dbg
+          cp -a work/root/usr/lib/x86_64-linux-gnu/libc.so.6 artifact/
+          cp -a work/root/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 artifact/
+          cp -a work/dbg/usr/lib/debug artifact/debug
+          readelf -n artifact/libc.so.6 | grep -A1 'Build ID' > artifact/build-ids.txt || true
+          readelf -n artifact/ld-linux-x86-64.so.2 | grep -A1 'Build ID' >> artifact/build-ids.txt || true
+          cat artifact/build-ids.txt
+          find artifact/debug -type f -printf '%p %s bytes\n' | head -20
+      - name: Upload glibc files
+        uses: actions/upload-artifact@v4
+        with:
+          name: powckle-glibc-with-debug
+          path: artifact
+          retention-days: 1
+          compression-level: 6
+          include-hidden-files: true
